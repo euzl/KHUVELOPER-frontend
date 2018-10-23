@@ -4,21 +4,39 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as reducer from './store';
 
-const sampleText = " printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'"
-const text = sampleText.split('');
+import { color, text } from './color';
 
 class Image extends Component {
+  constructor() {
+    super();
+    this.state = {
+      sentence: (Array(6).join(text)),
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const { typingStatus, word } = nextProps;
+    const { typingNone } = this.props;
+    console.log(typingStatus);
+    if (typingStatus === 'done') {
+      this.setState({
+        sentence: this.state.sentence.concat(word),
+      })
+      return typingNone();
+    }
+  }
+
   render() {
+    const colorList = color.split(':');
+    const textList = this.state.sentence.split('');
     return (
       <Fragment>
-        <div>이미지로 글자들이 보여지는 부분입니다.</div>
-         <div className="text-area">
-          {text.map((item, i) => (
-            <span style={{
-              color: `rgb(${i/2},${i/2},${i/2})`
-            }} key={i}>{item}</span>
-          ))}
-        </div>
+        {textList.map((item, i) => ( 
+          <div className="word" style={{
+            color: colorList[i],
+            // backgroundColor: 'black',
+          }} key={i}>{item}</div>
+        ))}
       </Fragment>
     );
   }

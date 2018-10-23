@@ -9,8 +9,10 @@ class App extends Component {
     return (
       <div className="App">
         <h1>KHUVELOPER PROJECT</h1>
-        <Image />
-        <Typing />
+        <div className="text-area">
+          <Image />
+          <Typing />
+        </div>
       </div>
     );
   }
