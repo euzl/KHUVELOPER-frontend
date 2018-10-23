@@ -7,12 +7,19 @@ class Typing extends Component {
   render() {
     return (
       <Fragment>
-          <Typist>
+          <Typist onTypingDone={this.props.typingDone}>
         타이핑 애니메이션이 실행되는 부분입니다.
           </Typist>
       </Fragment>
     );
   }
 }
-
-export default Typing;
+export default connect(
+  state => ({
+    typingStatus: state.typingStatus,
+    word: state.word,
+  }),
+  dispatch => ({
+    typingDone: bindActionCreators(reducer.typingDone, dispatch)
+  })
+)(Typing);
