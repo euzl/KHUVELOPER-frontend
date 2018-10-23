@@ -10,7 +10,7 @@ class Image extends Component {
   constructor() {
     super();
     this.state = {
-      sentence: (Array(6).join(text)),
+      sentence: (Array(30).join(text)).substr(0, 4700),
     }
   }
 
@@ -34,7 +34,7 @@ class Image extends Component {
         {textList.map((item, i) => ( 
           <div className="word" style={{
             color: colorList[i],
-            // backgroundColor: 'black',
+            // backgroundColor: colorList[i],
           }} key={i}>{item}</div>
         ))}
       </Fragment>

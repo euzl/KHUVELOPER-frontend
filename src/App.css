@@ -4,10 +4,12 @@
 }
 
 .text-area {
-  background-color: aqua;
+  /* background-color: aqua; */
+  padding: 10px;
+  border: 2px solid !important;
   line-height: 0px;
   width: 800px;
-  height: 500px;
+  height: 560px;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
