@@ -6,6 +6,8 @@ import * as reducer from './store';
 
 import Typist from 'react-typist';
 
+
+
 class Typing extends Component {
   constructor() {
     super();
@@ -40,6 +42,8 @@ class Typing extends Component {
     return typingIng(testlist[count]);
   }
 
+
+
   render() {
     const { word } = this.state;
     const { typingStatus } = this.props;
@@ -49,7 +53,10 @@ class Typing extends Component {
       <Fragment>
           <Typist onTypingDone={this.props.typingDone}>
             <Typist.Delay ms={100} />
-            <div className="word">{word}</div>
+              <div className="word" style = {{
+                width: '800px', // text area 사이즈
+                textAlign: 'left',
+              }}>{word}</div>
           </Typist>
       </Fragment>
     );
