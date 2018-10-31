@@ -43,11 +43,15 @@ class Typing extends Component {
   render() {
     const { word } = this.state;
     const { typingStatus } = this.props;
+    const cursor = {show: false}
 
     if (typingStatus !== 'typing') return <div />
     return (
       <Fragment>
-          <Typist onTypingDone={this.props.typingDone}>
+          <Typist
+          onTypingDone={this.props.typingDone}
+          cursor = {cursor}
+          >
             <Typist.Delay ms={100} />
             <div className="word">{word}</div>
           </Typist>
