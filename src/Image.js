@@ -19,8 +19,12 @@ class Image extends Component {
     const { typingNone } = this.props;
     console.log(typingStatus);
     if (typingStatus === 'done') {
+      let newSentence = this.state.sentence.concat(word);
+      if (newSentence.length > 4700) {
+        // 길이 조절하는 코드 추가하기
+      }
       this.setState({
-        sentence: this.state.sentence.concat(word),
+        sentence: newSentence,
       })
       return typingNone();
     }
