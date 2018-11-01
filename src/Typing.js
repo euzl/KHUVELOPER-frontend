@@ -51,7 +51,7 @@ class Typing extends Component {
           <Typist
             onTypingDone={this.props.typingDone}
             cursor={cursor}>
-              <div className="word" style = {{color: 'black'}}>{word}</div>
+              <div className="word">{word}</div>
           </Typist>
       </Fragment>
     );
