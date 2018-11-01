@@ -49,9 +49,11 @@ class Typing extends Component {
     return (
       <Fragment>
           <Typist
-            onTypingDone={this.props.typingDone}
-            cursor={cursor}>
-              <div className="word">{word}</div>
+          onTypingDone={this.props.typingDone}
+          cursor={cursor}
+          >
+            <Typist.Delay ms={1} />
+            <div className="word">{word}</div>
           </Typist>
       </Fragment>
     );
