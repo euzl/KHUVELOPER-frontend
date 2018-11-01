@@ -1,22 +1,28 @@
 .App {
   text-align: center;
   align-items: center;
+  background-color: black;
+  color: white;
+  padding-bottom: 100px;
+  font-style: normal;
 }
 
 .text-area {
   /* background-color: aqua; */
   padding: 10px;
   border: 2px solid !important;
+  color: white;
   line-height: 0px;
   width: 800px;
   height: 560px;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: auto;
 }
 
 .word {
-  font-size: 7px;
+  font-size: 9px;
   width: 8px;
   height: 8px;
   display: inline-block;
