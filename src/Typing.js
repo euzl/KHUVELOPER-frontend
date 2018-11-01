@@ -54,7 +54,7 @@ class Typing extends Component {
               <div className="word" style = {{
                 width: '800px', // text area 사이즈
                 textAlign: 'left',
-                color: 'white'
+                color: 'black'
               }}>{word}</div>
           </Typist>
       </Fragment>
