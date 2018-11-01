@@ -11,9 +11,10 @@ class App extends Component {
         <h1>C O G A M</h1>
         <div className="text-area">
           <Image />
-          <Typing />
         </div>
+        <Typing />
       </div>
+
     );
   }
 }

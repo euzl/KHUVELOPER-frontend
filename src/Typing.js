@@ -52,8 +52,7 @@ class Typing extends Component {
           onTypingDone={this.props.typingDone}
           cursor = {cursor}
           >
-            <Typist.Delay ms={100} />
-            <div className="word">{word}</div>
+            <div className="word" style = {{color: 'black'}}>{word}</div>
           </Typist>
       </Fragment>
     );
