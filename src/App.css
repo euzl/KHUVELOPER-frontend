@@ -1,6 +1,12 @@
 .App {
   text-align: center;
   align-items: center;
+  /* background-color: black; */
+}
+
+h1.title {
+  margin-top: 50px;
+  color: white;
 }
 
 .text-area {

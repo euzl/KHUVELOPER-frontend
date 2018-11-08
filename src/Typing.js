@@ -6,8 +6,6 @@ import * as reducer from './store';
 
 import Typist from 'react-typist';
 
-
-
 class Typing extends Component {
   constructor() {
     super();
@@ -41,8 +39,6 @@ class Typing extends Component {
 
     return typingIng(testlist[count]);
   }
-
-
 
   render() {
     const { word } = this.state;
