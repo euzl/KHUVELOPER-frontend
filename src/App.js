@@ -12,6 +12,7 @@ class App extends Component {
         <div className="text-area">
           <Image />
         </div>
+        <input id="file1" clas="ml8" type="file"/>
         <Typing />
       </div>
 
