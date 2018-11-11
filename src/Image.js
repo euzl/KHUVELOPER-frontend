@@ -35,13 +35,13 @@ class Image extends Component {
     const textList = this.state.sentence.split('');
     return (
       <Fragment>
-      <div style = {{textAlign: 'left',}}>
-        {textList.map((item, i) => (
-          <div className="word" style={{
-            color: colorList[i],
-            // backgroundColor: colorList[i],
-          }} key={i}>{item}</div>
-        ))}
+        <div style={{ textAlign: 'left', }}>
+          {textList.map((item, i) => (
+            <div className="word" style={{
+              color: colorList[i],
+              // backgroundColor: colorList[i],
+            }} key={i}>{item}</div>
+          ))}
 
         </div>
       </Fragment>
