@@ -3,6 +3,7 @@
   align-items: center;
   background-color: black;
   color: white;
+  padding-top: 6px;
   padding-bottom: 100px;
   font-style: normal;
 }
@@ -22,10 +23,11 @@
 }
 
 .word {
-  font-size: 9px;
+  font-size: 8px;
   width: 8px;
   height: 8px;
   display: inline-block;
   font-weight: bold;
   text-align: center;
+  line-height: 100%; /*줄간격*/
 }
