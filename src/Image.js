@@ -6,7 +6,6 @@ import * as reducer from './store';
 
 import { color, text } from './color';
 
-
 class Image extends Component {
   constructor() {
     super();
@@ -34,19 +33,18 @@ class Image extends Component {
     }
   }
 
-  render(){
-    const colorList = color.split(':'); // ':'로 rgb 나눔
+  render() {
+    const colorList = color.split(':'); // ':'로 rgb 나눈다.
     const textList = this.state.sentence.split('');
     return (
       <Fragment>
-      <div style = {{textAlign: 'left',}}>
-        {textList.map((item, i) => (
-          <div className="word" style={{
-            color: colorList[i], // word글자에 색 넣기
-             //backgroundColor: colorList[i],
-          }} key={i}>{item}</div>
-        ))}
-
+        <div style={{ textAlign: 'left', }}>
+          {textList.map((item, i) => (
+            <div className="word" style={{
+              color: colorList[i], // word글자에 색 넣기
+              // backgroundColor: colorList[i],
+            }} key={i}>{item}</div>
+          ))}
         </div>
       </Fragment>
     );
@@ -57,7 +55,6 @@ export default connect(
   state => ({
     typingStatus: state.typingStatus,
     word: state.word,
-    //splitWord: state.splitWord,
   }),
   dispatch => ({
     typingNone: bindActionCreators(reducer.typingNone, dispatch)
