@@ -1,16 +1,22 @@
 .App {
   text-align: center;
   align-items: center;
-  background-color: black;
+  background-image: url(universe.jpg);
   color: white;
+  padding-top: 6px;
   padding-bottom: 100px;
-  font-style: normal;
+}
+
+h1.title {
+  margin-top: 50px;
+  color: white;
 }
 
 .text-area {
   /* background-color: aqua; */
   padding: 10px;
   border: 2px solid !important;
+  background-color: black;
   color: white;
   line-height: 0px;
   width: 800px;
@@ -22,10 +28,11 @@
 }
 
 .word {
-  font-size: 9px;
+  font-size: 8px;
   width: 8px;
   height: 8px;
   display: inline-block;
   font-weight: bold;
   text-align: center;
+  line-height: 100%; /*줄간격*/
 }
